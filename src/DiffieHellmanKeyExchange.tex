@@ -81,8 +81,9 @@
     Diffie--Hellman (DH) protocol is a method of asymmetric exchange
     of the cryptographic keys for a group of two or more participants,
     developed in 1976 by cryptographers Ralph Merkle, Whitfield Diffie and Martin Hellman.
-    In contrast to symmetric key exchange, the Diffie\textendash Hellman protocol eliminates the direct transfer of the shared secret
-    between the participants, each participant computes a shared secret with his own private-public key pair.
+    In contrast to the symmetric key exchange,
+    the Diffie\textendash Hellman protocol eliminates the direct transfer of the shared secret
+    between the participants so that each participant computes a shared secret with his own private-public key pair.
     The Diffie\textendash Hellman protocol is based on a one-way function of the form
 
     \begin{equation}
@@ -97,10 +98,10 @@
     is unique and belong to the set $\{1, 2, \dots, P-1\}$.
     The period of such cyclic group $\mathbb{Z}_{P}$ is $P-1$ then.
 
-    Thus, the safety of the Diffie--Hellman protocol is based on the discrete logarithm problem, which is unsolvable
+    Thus, the safety of the Diffie--Hellman protocol is based on the discrete logarithm problem which is unsolvable
     in polynomial time if the constants $G$ and $P$ are chosen correctly.
-    Graphically, the flow of the Diffie--Hellman protocol can be expressed through the
-    analogy with mixing paints, as below picture shows
+    Graphically the flow of the Diffie--Hellman protocol can be expressed through the
+    analogy with mixing paints as the picture below shows
     \begin{figure}[H]
         \centering
         \includegraphics[width=1\textwidth]{Pictures/Diffie_Hellman_keyexchange_concept_diagram}
@@ -173,7 +174,7 @@
 
     Now requested participant is able to derive the common secret.
     In order to provide an example, a simple command line interface is implemented.
-    We have used an Elliptic Curve Diffie–-Hellman implementation \texttt{ECDiffieHellmanCng Class} from the namespace
+    We have used an Elliptic Curve Diffie\textendash Hellman implementation \texttt{ECDiffieHellmanCng Class} from the namespace
     \texttt{System.Security.Cryptography} of the .NET base class library.
     The \texttt{P-256} curve is used.
 
