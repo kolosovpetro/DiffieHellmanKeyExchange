@@ -3,16 +3,12 @@
 Discussion on Diffie-Hellman Key Exchange and its implementation via REST.
 
 <p align="center">
-  <img src="img/readme_logo_example.png" alt="logo_example"/>
+  <img src="img/DH_Key_Exchange.jpg" alt="logo_example"/>
 </p>
 
 [![Build PDF](https://github.com/kolosovpetro/DiffieHellmanKeyExchange/actions/workflows/build-pdf.yml/badge.svg)](https://github.com/kolosovpetro/DiffieHellmanKeyExchange/actions/workflows/build.yml/badge.svg)
 [![Build and Deploy PDF](https://github.com/kolosovpetro/DiffieHellmanKeyExchange/actions/workflows/build-and-deploy-pdf.yml/badge.svg)](https://github.com/kolosovpetro/DiffieHellmanKeyExchange/actions/workflows/build-and-deploy.yml/badge.svg)
 ![contributors count](https://img.shields.io/github/contributors/kolosovpetro/DiffieHellmanKeyExchange)
-
-## What is all about
-
-LaTeX template for Github including general CI/CD actions and Mathematica templates.
 
 ## Build and run in Intellij IDEA
 
