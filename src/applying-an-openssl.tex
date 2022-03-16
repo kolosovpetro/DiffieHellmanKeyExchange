@@ -1,0 +1,20 @@
+It is very important to note that \texttt{ECDiffieHellmanCng Class} performs the native calls to
+Windows API, so that it is not compatible with any UNIX based operating systems.
+Therefore, such problem may be solved by means of \texttt{openssl} the cross-platform library.
+Thus, the key exchange is to be done as follows
+\begin{itemize}
+    \item Generate the Diffie-Hellman global public parameters, saving them in the file dhp.pem: \\
+    \texttt{openssl genpkey -genparam -algorithm DH -out dhp.pem }
+    \item Each user now uses the public parameters to generate their own private and public key, 
+    saving them in the file dhkey1.pem (for user 1) and dhkey2.pem (for user 2): \\
+    \texttt{openssl genpkey -paramfile dhp.pem -out dhkey1.pem} \\
+    \texttt{openssl genpkey -paramfile dhp.pem -out dhkey2.pem} \\
+    \item The users must exchange their public keys. 
+    First extract the public key into the file dhpub1.pem 
+    (and similar user 2 creates dh2pub.pem - this step is not shown below): \\
+    \texttt{openssl pkey -in dhkey1.pem -pubout -out dhpub1.pem} \\
+    \texttt{openssl pkey -in dhkey1.pem -pubout -out dhpub2.pem}
+    \item Derive the common secrets: \\
+    \texttt{openssl pkeyutl -derive -inkey dhkey1.pem -peerkey dhpub2.pem -out secret1.bin} \\
+    \texttt{openssl pkeyutl -derive -inkey dhkey2.pem -peerkey dhpub1.pem -out secret2.bin}
+\end{itemize}
